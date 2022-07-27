@@ -13,36 +13,44 @@ struct CoinView: View {
     @State private var coinImage = "Heads"
     @State private var gameOver = false
     @State private var winMessage = ""
+    @State var isFaceUp = false
+    @Environment(\.presentationMode) var presentationMode
+    var animation: Animation {
+        Animation.easeInOut
+    .repeatCount(15)
+    .speed(1.0)
+    }
     let prediction: Int
     var body: some View {
         VStack {
             Text("Flip the coin")
             Button(action: {
                 buttonPressed()
+                    
             }) {
-                
                 ZStack {
                     Image(coinImage)
                         .resizable()
                         .frame(width: 300, height: 300, alignment: .center)
-                    //                    Image("Tails")
-                    //                        .resizable()
-                    //                        .frame(width: 300, height: 300, alignment: .center)
-                    //                        .opacity(buttonPressed() == notHeads() ? 1 : 0)
+                            
                 }
             }
-            .alert(isPresented: $gameOver) {
-                Alert(title: Text(winMessage),dismissButton: .destructive(Text("Play again"), action: {
-                    withAnimation {
-                        coinImage = "Heads"
-                        gameOver = false
-                    }
-                }))
-                
-            }
+                .alert(isPresented: $gameOver) {
+                    Alert(title: Text(winMessage),dismissButton: .destructive(Text("Play again"), action: {
+                        withAnimation {
+                            coinImage = "Heads"
+                            gameOver = false
+                            self.presentationMode.wrappedValue.dismiss()
+                        }
+                    }))
+                    
+                }
+           
         }
     }
+    
     func buttonPressed() {
+        
         if Int.random(in: 0...1) == 0 {
             coinImage = "Heads"
             if prediction == 0 {
@@ -64,6 +72,7 @@ struct CoinView: View {
             }
         }
     }
+    
 }
 
 struct CoinView_Previews: PreviewProvider {
