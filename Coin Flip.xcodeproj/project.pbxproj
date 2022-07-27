@@ -11,6 +11,7 @@
 		AEB0EEE1288DF12E00CB7548 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEB0EEE0288DF12E00CB7548 /* ContentView.swift */; };
 		AEB0EEE3288DF13800CB7548 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AEB0EEE2288DF13800CB7548 /* Assets.xcassets */; };
 		AEB0EEE6288DF13800CB7548 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AEB0EEE5288DF13800CB7548 /* Preview Assets.xcassets */; };
+		AED27149288E2CA400D6D87F /* CoinView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AED27148288E2CA400D6D87F /* CoinView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +20,7 @@
 		AEB0EEE0288DF12E00CB7548 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		AEB0EEE2288DF13800CB7548 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		AEB0EEE5288DF13800CB7548 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		AED27148288E2CA400D6D87F /* CoinView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoinView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -53,6 +55,7 @@
 			children = (
 				AEB0EEDE288DF12E00CB7548 /* Coin_FlipApp.swift */,
 				AEB0EEE0288DF12E00CB7548 /* ContentView.swift */,
+				AED27148288E2CA400D6D87F /* CoinView.swift */,
 				AEB0EEE2288DF13800CB7548 /* Assets.xcassets */,
 				AEB0EEE4288DF13800CB7548 /* Preview Content */,
 			);
@@ -137,6 +140,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AED27149288E2CA400D6D87F /* CoinView.swift in Sources */,
 				AEB0EEE1288DF12E00CB7548 /* ContentView.swift in Sources */,
 				AEB0EEDF288DF12E00CB7548 /* Coin_FlipApp.swift in Sources */,
 			);

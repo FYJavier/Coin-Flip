@@ -12,18 +12,19 @@ struct ContentView: View {
     var body: some View {
         NavigationView {
             VStack {
-                Text("Enter your prediction")
+                Text("Make your prediction")
                     .font(.system(size: 25))
                     .padding()
                 Picker("", selection: $prediction) {
-                    Text("Heads").tag(1)
-                    Text("Tails").tag(2)
+                    Text("Heads").tag(0)
+                    Text("Tails").tag(1)
                 }
                 .pickerStyle(SegmentedPickerStyle())
                 .frame(width: 350, height: 20, alignment: .center)
                 .padding()
                 .padding(.bottom, 30)
                 .font(.system(size: 18))
+                NavigationLink("Next", destination: CoinView(prediction: prediction))
             }
             .padding(.bottom, 150)
             .navigationTitle("Coin Flip")
